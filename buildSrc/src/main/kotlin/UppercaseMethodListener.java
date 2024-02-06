@@ -1,9 +1,12 @@
+import org.antlr.v4.runtime.tree.TerminalNode;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class UppercaseMethodListener extends Java8BaseListener {
 
     private List<String> errors = new ArrayList<>();
 
-    // ... getter for errors
- 
     @Override
     public void enterMethodDeclarator(Java8Parser.MethodDeclaratorContext ctx) {
         TerminalNode node = ctx.Identifier();
